@@ -7,8 +7,8 @@ Proyecto realizado con Angular v19 , MaterialUI , consumo de la Api de dragonbal
 -Lazy loading.  
 -Formularios Reactivos.  
 -Manejo de errores(interceptors).   
--Traducciones (en proceso) 
--PWA (en proceso)
+-Traducciones (Completado)       
+-PWA (en proceso)  
 
 This project fue creado usando  [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
 
