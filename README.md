@@ -10,7 +10,7 @@ This project fue creado usando  [Angular CLI](https://github.com/angular/angular
 
 ## Servidor de Desarrollo
 
-instalar dependencia
+instalar dependencias
 
 ```bash
 npm install
