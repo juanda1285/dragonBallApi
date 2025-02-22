@@ -1,0 +1,20 @@
+{
+  "ENGLISH": "English",
+  "SPANISH": "Spanish",
+  "HI": "Hi",
+  "SEARCH": "Search",
+  "CHARACTERS": "Characters",
+  "LOGIN": "Login",
+  "ERROR": "Error",
+  "EMAIL": "Email",
+  "EMAIL_REQUERIED": "Email is required",
+  "EMAIL_INVALID": "Email is invalid",
+  "PASSWORD": "Password",
+  "PASSWORD_REQUERIED": "Password is required",
+  "PASSWORD_INVALID": "Password is invalid",
+  "DRAGON_TITLE": "Dragon Ball Characters",
+  "SEARCH_CHARACTER": "Search Character",
+  "PLANET": "Planet",
+  "TRANSFORMATIONS": "Transformations",
+  "DESCRIPTION": "Description"
+}

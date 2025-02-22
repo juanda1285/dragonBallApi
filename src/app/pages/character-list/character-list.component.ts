@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-character-list',
@@ -21,6 +22,7 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     MatPaginatorModule,
     FormsModule,
+    TranslateModule
   ],
   styleUrls: ['./character-list.component.css'],
 })

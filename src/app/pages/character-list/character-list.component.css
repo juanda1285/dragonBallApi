@@ -15,6 +15,13 @@ h2{
   flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
 }
 
+mat-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+  padding: 10px;
+}
 .character-image {
   width: 60px;
   height: 60px;

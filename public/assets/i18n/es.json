@@ -1,0 +1,20 @@
+{
+  "ENGLISH": "Ingles",
+  "SPANISH": "Español",
+  "HI": "Hola",
+  "SEARCH": "Buscar",
+  "CHARACTERS": "Personajes",
+  "LOGIN": "Iniciar sesión",
+  "ERROR": "Error",
+  "EMAIL": "Correo",
+  "EMAIL_REQUERIED": "Correo es requerido",
+  "EMAIL_INVALID": "Correo invalido",
+  "PASSWORD": "Contraseña",
+  "PASSWORD_REQUERIED": "La Contraseña es requerida",
+  "PASSWORD_INVALID": "Contraseña invalida",
+  "DRAGON_TITLE": "Personajes de Dragon Ball",
+  "SEARCH_CHARACTER": "Buscar Personaje",
+  "PLANET": "Planeta",
+  "TRANSFORMATIONS": "Transformaciones",
+  "DESCRIPTION": "Drescripcion"
+}

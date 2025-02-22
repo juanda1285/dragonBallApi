@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -14,11 +14,12 @@ import { logout } from '../../store/auth.actions';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
   standalone: true,
-  imports: [CommonModule, MatToolbarModule, MatButtonModule, MatIconModule],
+  imports: [CommonModule, MatToolbarModule, MatButtonModule, MatIconModule, TranslateModule],
 })
 export class NavbarComponent {
   isLoggedIn = false;
   userName: string | null = null;
+  currentLanguage: string = 'es';
 
 
   constructor(
@@ -35,8 +36,16 @@ export class NavbarComponent {
   }
 
   // Cambiar el idioma
-  changeLanguage(lang: string): void {
-    this.translate.use(lang);
+  changeLanguage() {
+    this.currentLanguage = this.currentLanguage === 'es' ? 'en' : 'es'; // Cambia entre 'es' y 'en'
+    const language = this.currentLanguage;
+    // Aquí llamas a tu servicio o función para cambiar el idioma en la aplicación
+    // Por ejemplo:
+    this.translate.use(language); // Si estás usando ngx-translate
+  }
+
+  getLanguageText(): string {
+    return this.currentLanguage === 'es' ? 'SPANISH' : 'ENGLISH';
   }
 
   // Cerrar sesión

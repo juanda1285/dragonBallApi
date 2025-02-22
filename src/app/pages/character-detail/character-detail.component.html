@@ -18,7 +18,7 @@
     <div class="character-info">
       <!-- Información del planeta -->
       <div class="planet-info">
-        <p><strong>Planeta:</strong> {{ character.originPlanet?.name }}</p>
+        <p><strong>{{'PLANET' | translate}}:</strong> {{ character.originPlanet?.name }}</p>
         <img *ngIf="character.originPlanet?.image" [src]="character.originPlanet.image"
           [alt]="character.originPlanet.name" class="planet-image" />
       </div>
@@ -27,7 +27,7 @@
 
       <!-- Transformaciones -->
       <div *ngIf="character.transformations.length > 0" class="transformations">
-        <p><strong>Transformaciones:</strong></p>
+        <p><strong>{{'TRANSFORMATIONS' | translate}}:</strong></p>
         <ul>
           <li *ngFor="let transformation of character.transformations">
             -{{ transformation.name }}
@@ -38,7 +38,7 @@
       </div>
 
       <!-- Descripción -->
-      <p><strong>Descripción:</strong> {{ character.description | truncate }}</p>
+      <p><strong>{{'DESCRIPTION' | translate}}:</strong> {{ character.description | truncate }}</p>
     </div>
   </div>
 </mat-card>

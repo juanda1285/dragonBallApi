@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { login } from '../../store/auth.actions';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,8 @@ import { Router } from '@angular/router';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    TranslateModule
   ]
 })
 export class LoginComponent {
