@@ -38,7 +38,17 @@
       </div>
 
       <!-- Descripción -->
-      <p><strong>{{'DESCRIPTION' | translate}}:</strong> {{ character.description | truncate }}</p>
+      <p><strong>{{'DESCRIPTION' | translate}}:</strong><span *ngIf="!isFullDescriptionShown(character.id)">
+          {{ character.description | truncate:200 }}
+        </span>
+        <span *ngIf="isFullDescriptionShown(character.id)">
+          {{ character.description }}
+        </span>
+        <!-- Botón para alternar entre "ver más" y "ver menos" -->
+        <button style='margin-top: 10px;' mat-raised-button color="primary" (click)="toggleDescription(character.id)">
+          {{ isFullDescriptionShown(character.id) ? getTranslation('SEE_LESS') : getTranslation('SEE_MORE') }}
+        </button>
+      </p>
     </div>
   </div>
 </mat-card>
