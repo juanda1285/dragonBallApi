@@ -1,4 +1,5 @@
 # Appinit
+npx http-server -p 8080 -c-1 dist/appinit/browser --spa
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
 

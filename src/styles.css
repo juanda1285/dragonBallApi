@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos globales para el fondo oscuro */
+body {
+  background-color: #2a2a2a;
+  /* Color de fondo oscuro */
+  /* Color de texto claro */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Asegúrate de que los componentes de Angular Material también tengan un fondo oscuro */
+mat-card {
+  background-color: #1e1e1e !important;
+  /* Fondo oscuro para las tarjetas */
+  color: #ffffff;
+  /* Texto claro */
+}
+
+mat-form-field {
+  color: #ffffff;
+  /* Texto claro en los campos de formulario */
+}
+
+mat-input-element {
+  color: #ffffff;
+  /* Texto claro en los inputs */
+}
+
+mat-icon {
+  color: #ffffff;
+  /* Iconos claros */
+}

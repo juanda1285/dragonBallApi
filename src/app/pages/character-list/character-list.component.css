@@ -1,0 +1,35 @@
+mat-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+  padding: 10px;
+}
+
+h2{
+  margin: 13px 88px -46px;
+  color: #f5f5f5;
+}
+
+.character-info {
+  flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
+}
+
+.character-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin-left: 15px;
+}
+
+
+mat-list-item {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+mat-list-item:hover {
+  background-color: #383838;
+}

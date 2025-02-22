@@ -1,0 +1,44 @@
+<button mat-icon-button class="back-button" (click)="goBack()">
+  <mat-icon>arrow_back</mat-icon> <!-- Botón para volver atrás -->
+</button>
+<mat-card *ngIf="character" class="character-detail-card">
+
+  <mat-card-header>
+    <mat-card-title>{{ character.name }}</mat-card-title>
+    <mat-card-subtitle>{{ character.race }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <div class="character-detail-content">
+    <!-- Columna izquierda: Imagen del personaje -->
+    <div class="character-image-container">
+      <img [src]="character.image" [alt]="character.name" class="character-image" width="150" height="250" />
+    </div>
+
+    <!-- Columna derecha: Información del personaje -->
+    <div class="character-info">
+      <!-- Información del planeta -->
+      <div class="planet-info">
+        <p><strong>Planeta:</strong> {{ character.originPlanet?.name }}</p>
+        <img *ngIf="character.originPlanet?.image" [src]="character.originPlanet.image"
+          [alt]="character.originPlanet.name" class="planet-image" />
+      </div>
+
+      <p><strong>Ki:</strong> {{ character.ki }}</p>
+
+      <!-- Transformaciones -->
+      <div *ngIf="character.transformations.length > 0" class="transformations">
+        <p><strong>Transformaciones:</strong></p>
+        <ul>
+          <li *ngFor="let transformation of character.transformations">
+            -{{ transformation.name }}
+            <img *ngIf="transformation.image" [src]="transformation.image" [alt]="transformation.name"
+              class="transformation-image" />
+          </li>
+        </ul>
+      </div>
+
+      <!-- Descripción -->
+      <p><strong>Descripción:</strong> {{ character.description | truncate }}</p>
+    </div>
+  </div>
+</mat-card>

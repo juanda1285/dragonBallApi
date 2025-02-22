@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <span *ngIf="isLoggedIn && userName">Hola {{ userName }}</span>
+  <span *ngIf="!isLoggedIn">Appinit</span>
+
+  <span class="spacer"></span> <!-- Espacio entre elementos -->
+
+  <!-- Botón para cambiar el idioma -->
+  <span class='nav-span' (click)="changeLanguage('en')" title="English">
+    English
+  </span>
+  <span class='nav-span' (click)="changeLanguage('es')" title="Español">
+    Español
+  </span>
+
+  <!-- Botón para cerrar sesión (solo visible si hay sesión) -->
+  <button *ngIf="isLoggedIn" mat-icon-button (click)="logout()" title="Cerrar sesión">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>

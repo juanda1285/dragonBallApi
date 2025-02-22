@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Personajes de Dragon Ball</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field appearance="outline">
+      <mat-label>Buscar personaje</mat-label>
+      <input
+        matInput
+        placeholder="Nombre del personaje"
+        (input)="onSearchChange($event)"
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+
+    <mat-list>
+      <mat-list-item *ngFor="let character of characters" (click)="onCharacterClick(character.id)">
+        <div class="character-info">
+          <h2 mat-line>{{ character.name }} - {{ character.race }}</h2>
+        </div>
+        <img
+          mat-list-avatar
+          [src]="character.image"
+          [alt]="character.name"
+          class="character-image"
+        />
+      </mat-list-item>
+    </mat-list>
+
+    <mat-paginator
+      [length]="totalCharacters"
+      [pageSize]="pageSize"
+      [pageIndex]="pageIndex"
+      (page)="onPageChange($event)"
+      showFirstLastButtons
+    >
+    </mat-paginator>
+  </mat-card-content>
+</mat-card>
